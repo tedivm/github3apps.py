@@ -1,1 +1,1 @@
-from .github3apps import GithubApp
+from .github3apps import GithubApp, GithubAppInstall
