@@ -20,7 +20,7 @@ def get_link_from_response(response):
 
 class GithubApp:
 
-    useragent = 'gitconsensus'
+    useragent = 'github3apps'
 
     def __init__(self, appid, pkpath):
         if not os.path.isfile(pkpath):
