@@ -12,7 +12,9 @@ Using this library developers can access all of the special App endpoints as wel
 To connect you need to pass the app id and the location of your app's private key.
 
 ```python
-gha = GithubConsensusApp(app_id, path_to_private_key)
+from github3apps import GithubApp
+
+gha = GithubApp(app_id, path_to_private_key)
 gha.set_user_agent('MyApp')
 gha.get_app()
 ```
@@ -23,7 +25,9 @@ gha.get_app()
 This returns the list of installations IDs available to your application.
 
 ```python
-gha = GithubConsensusApp(app_id, path_to_private_key)
+from github3apps import GithubApp
+
+gha = GithubApp(app_id, path_to_private_key)
 installation_ids = gha.get_installations()
 ```
 
@@ -33,7 +37,9 @@ installation_ids = gha.get_installations()
 This returns the list of repositories available to your specific installation.
 
 ```python
-gha = GithubConsensusApp(app_id, path_to_private_key)
+from github3apps import GithubApp
+
+gha = GithubApp(app_id, path_to_private_key)
 
 installation = gha.get_installation(installation_id)
 installation.get_repositories()
@@ -45,7 +51,9 @@ installation.get_repositories()
 This returns a [github3.py](https://github.com/sigmavirus24/github3.py) client already authenticated against a specific installation.
 
 ```python
-gha = GithubConsensusApp(app_id, path_to_private_key)
+from github3apps import GithubApp
+
+gha = GithubApp(app_id, path_to_private_key)
 installation = gha.get_installation(installation_id)
 gh = installation.get_github3_client()
 ```
