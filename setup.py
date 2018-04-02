@@ -43,7 +43,7 @@ setup(
 
     install_requires=[
         'cryptography>=2.1.4,<3',
-        'github3.py>=0.9.6,<0.10',
+        'github3.py>=0.9.6,<2',
         'pyjwt>=1.5.3,<2',
         'requests>=2.18.0,<2.19',
     ],
