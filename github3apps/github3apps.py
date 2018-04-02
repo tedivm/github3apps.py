@@ -39,8 +39,8 @@ class GithubApp:
         payload = {
             # issued at time
             "iat": now,
-            # JWT expiration time (10 minute maximum)
-            "exp": now + (10 * 60),
+            # JWT expiration time (10 minute maximum, set to nine in case of crappy clocks)
+            "exp": now + (9 * 60),
             # GitHub App's identifier
             "iss": self.appid
         }
