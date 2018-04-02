@@ -133,5 +133,5 @@ class GithubAppInstall:
 
     def get_pr_numbers(self, user, repo):
         repository = self.get_repository(user, repo).repository
-        prs = repository.iter_pulls(state="open")
+        prs = repository.pull_requests(state="open")
         return [pr.number for pr in prs]
