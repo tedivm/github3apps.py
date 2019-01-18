@@ -46,7 +46,7 @@ installation.get_repositories()
 ```
 
 
-### Comminicate with Github API as Installation
+### Communicate with Github API as Installation
 
 This returns a [github3.py](https://github.com/sigmavirus24/github3.py) client already authenticated against a specific installation.
 
