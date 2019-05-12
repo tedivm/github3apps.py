@@ -14,7 +14,7 @@ def get_link_from_response(response):
         groups = re.findall(regex, response.headers['Link'])
         for group in groups:
             if group[1] == 'next':
-                return group[1]
+                return 'https://api.github.com/%s' % (group[0])
     return False
 
 
