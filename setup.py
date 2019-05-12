@@ -13,7 +13,7 @@ except(IOError, ImportError):
     long_description = open('README.md').read()
 
 
-version = '0.1.3'
+version = '0.1.4'
 setup(
 
     name='github3apps.py',
@@ -45,7 +45,7 @@ setup(
         'cryptography>=2.1.4,<3',
         'github3.py>=1,<2',
         'pyjwt>=1.5.3,<2',
-        'requests>=2.18.0,<2.19',
+        'requests>=2.18.0,<3',
     ],
 
     extras_require={
