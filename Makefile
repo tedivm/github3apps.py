@@ -14,8 +14,8 @@ clean:
 	rm -rf $(ROOT_DIR)/*.egg-info
 
 dependencies:
-	if [ ! -d $(ROOT_DIR)/env ]; then python3 -m venv $(ROOT_DIR)/venv; fi
-	set -e; source $(ROOT_DIR)/venv/bin/activate; yes w | python -m pip install -e .[dev]
+	if [ ! -d $(ROOT_DIR)/env ]; then python3 -m venv $(ROOT_DIR)/env; fi
+	set -e; source $(ROOT_DIR)/env/bin/activate; yes w | python -m pip install -e .[dev]
 
 package:
 	set -e; source $(ROOT_DIR)/env/bin/activate; python setup.py bdist_wheel
