@@ -98,7 +98,7 @@ class GithubAppInstall:
             if exptime > testtime:
                 return tokens[self.installid]['token']
 
-        url = "installations/%s/access_tokens" % (self.installid,)
+        url = "app/installations/%s/access_tokens" % (self.installid,)
         tokens[self.installid] = self.app.request(url, 'POST')
         return tokens[self.installid]['token']
 

@@ -18,4 +18,4 @@ dependencies:
 	set -e; source $(ROOT_DIR)/venv/bin/activate; yes w | python -m pip install -e .[dev]
 
 package:
-	set -e; source $(ROOT_DIR)/venv/bin/activate; python setup.py bdist_wheel
+	set -e; source $(ROOT_DIR)/env/bin/activate; python setup.py bdist_wheel
