@@ -58,7 +58,9 @@ class GithubApp:
             'Accept': 'application/vnd.github.machine-man-preview+json',
             'User-Agent': self.useragent
         }
-        response = requestfunc('https://api.github.com/%s' % (url,), headers=headers)
+
+        request_url = url if url.startswith('https') else 'https://api.github.com/%s' % (url,)
+        response = requestfunc(request_url, headers=headers)
         response.raise_for_status()
         retobj = response.json()
 

@@ -4,16 +4,8 @@ from setuptools import setup, find_packages
 from codecs import open
 from os import path
 
-here = path.abspath(path.dirname(__file__))
 
-try:
-    import pypandoc
-    long_description = pypandoc.convert('README.md', 'rst')
-except(IOError, ImportError):
-    long_description = open('README.md').read()
-
-
-version = '0.2.1'
+version = '0.2.2'
 setup(
 
     name='github3apps.py',
@@ -22,7 +14,8 @@ setup(
     packages=find_packages(),
 
     description='Access the Github API as an Application',
-    long_description=long_description,
+    long_description=open('README.md').read(),
+    long_description_content_type='text/markdown',
     python_requires='>=3',
 
     author='Robert Hafner',
